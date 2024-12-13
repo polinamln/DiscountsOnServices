@@ -1,8 +1,14 @@
-import { useState } from "react";
 import "./App.css";
+import Hero from "./components/Hero/Hero";
+import Home from "./pages/Home";
 
 function App() {
-  return;
+  return (
+    <div>
+      <Home></Home>
+      <Hero></Hero>
+    </div>
+  );
 }
 
 export default App;

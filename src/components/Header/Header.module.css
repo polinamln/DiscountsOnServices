@@ -1,0 +1,14 @@
+.header {
+  width: 375px;
+  padding: 11px 24px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+}

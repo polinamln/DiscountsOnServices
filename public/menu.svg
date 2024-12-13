@@ -1,0 +1,9 @@
+<svg style="display: none;">
+  <symbol id="icon-menu" viewBox="0 0 32 32">
+    <path
+      fill="#070033"
+      style="fill: var(--color1, #070033)"
+      d="M4 5.333h24v2.667h-24v-2.667zM4 14.667h24v2.667h-24v-2.667zM4 24h24v2.667h-24v-2.667z"
+    ></path>
+  </symbol>
+</svg>
