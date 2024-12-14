@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Header({ setModal }) {
   return (
-    <div>
+    <div className={css.headerContainer}>
       <nav className={css.header}>
         <img className={css.logo} src="/logo.png" alt="logo"></img>
         <RxHamburgerMenu
