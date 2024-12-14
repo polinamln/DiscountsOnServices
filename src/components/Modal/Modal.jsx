@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import css from "./Modal.module.css";
 import { RxCross2 } from "react-icons/rx";
 
@@ -14,10 +15,10 @@ export default function Modal({ setModal }) {
         <div className={css.cardsBox}>
           <ul className={css.listNav}>
             <li>
-              <a className={css.link} href="#">
+              <NavLink className={css.link} to="/">
                 <p>X</p>
                 <p className={css.linkText}>Home</p>
-              </a>
+              </NavLink>
             </li>
             <li>
               <a className={css.link} href="#">
@@ -41,13 +42,19 @@ export default function Modal({ setModal }) {
 
           <ul className={css.listNav}>
             <li className={css.link}>
-              <a className={css.linkText}>Netflix</a>
+              <Link to="/netflix" className={css.linkText}>
+                Netflix
+              </Link>
             </li>
             <li className={css.link}>
-              <a className={css.linkText}>YouTube</a>
+              <Link to="/youtube" className={css.linkText}>
+                YouTube
+              </Link>
             </li>
             <li className={css.link}>
-              <a className={css.linkText}>Spotify</a>
+              <Link to="/spotify" className={css.linkText}>
+                Spotify
+              </Link>
             </li>
           </ul>
         </div>
