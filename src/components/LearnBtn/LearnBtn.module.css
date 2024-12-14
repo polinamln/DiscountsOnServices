@@ -1,0 +1,15 @@
+.btn {
+  background: var(--blue);
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: 287px;
+  height: 48px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+
+  display: block;
+}
