@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import css from "./Modal.module.css";
 import { RxCross2 } from "react-icons/rx";
 
@@ -15,25 +15,37 @@ export default function Modal({ setModal }) {
         <div className={css.cardsBox}>
           <ul className={css.listNav}>
             <li>
-              <NavLink className={css.link} to="/">
+              <Link className={css.link} to="/" onClick={() => setModal(false)}>
                 <p>X</p>
                 <p className={css.linkText}>Home</p>
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <a className={css.link} href="#">
+              <a
+                className={css.link}
+                href="/#about"
+                onClick={() => setModal(false)}
+              >
                 <p>X</p>
                 <p className={css.linkText}>About</p>
               </a>
             </li>
             <li>
-              <a className={css.link} href="#">
+              <a
+                className={css.link}
+                href="/#faq"
+                onClick={() => setModal(false)}
+              >
                 <p>X</p>
                 <p className={css.linkText}>FAQ</p>
               </a>
             </li>
             <li>
-              <a className={css.link} href="#">
+              <a
+                className={css.link}
+                href="/#support"
+                onClick={() => setModal(false)}
+              >
                 <p>X</p>
                 <p className={css.linkText}>Support</p>
               </a>
@@ -42,17 +54,29 @@ export default function Modal({ setModal }) {
 
           <ul className={css.listNav}>
             <li className={css.link}>
-              <Link to="/netflix" className={css.linkText}>
+              <Link
+                to="/netflix"
+                className={css.linkText}
+                onClick={() => setModal(false)}
+              >
                 Netflix
               </Link>
             </li>
             <li className={css.link}>
-              <Link to="/youtube" className={css.linkText}>
+              <Link
+                to="/youtube"
+                className={css.linkText}
+                onClick={() => setModal(false)}
+              >
                 YouTube
               </Link>
             </li>
             <li className={css.link}>
-              <Link to="/spotify" className={css.linkText}>
+              <Link
+                to="/spotify"
+                className={css.linkText}
+                onClick={() => setModal(false)}
+              >
                 Spotify
               </Link>
             </li>

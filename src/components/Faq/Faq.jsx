@@ -34,7 +34,7 @@ export default function Faq() {
   };
 
   return (
-    <div className="container">
+    <div id="faq" className="container">
       <h2 className={css.title}>FAQ</h2>
       {/* <ul className={css.list}>
         <li className={css.card}>
