@@ -53,31 +53,31 @@ export default function Modal({ setModal }) {
           </ul>
 
           <ul className={css.listNav}>
-            <li className={css.link}>
+            <li>
               <Link
                 to="/netflix"
-                className={css.linkText}
+                className={css.link}
                 onClick={() => setModal(false)}
               >
-                Netflix
+                <p className={css.linkText}>Netflix</p>
               </Link>
             </li>
-            <li className={css.link}>
+            <li>
               <Link
                 to="/youtube"
-                className={css.linkText}
+                className={css.link}
                 onClick={() => setModal(false)}
               >
-                YouTube
+                <p className={css.linkText}>YouTube</p>
               </Link>
             </li>
-            <li className={css.link}>
+            <li>
               <Link
                 to="/spotify"
-                className={css.linkText}
+                className={css.link}
                 onClick={() => setModal(false)}
               >
-                Spotify
+                <p className={css.linkText}>Spotify</p>
               </Link>
             </li>
           </ul>
