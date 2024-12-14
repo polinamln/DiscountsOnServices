@@ -1,0 +1,97 @@
+.logoContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  align-self: self-start;
+}
+
+.footer {
+  background-color: var(--blue);
+  width: 100%;
+  max-width: 768px;
+}
+
+.footerContainer {
+  width: 375px;
+  margin-bottom: 0;
+  padding: 40px 22px 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+}
+
+.logoText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--white);
+}
+
+.slogan {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+
+  margin-bottom: 40px;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.listNav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkText {
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+.box {
+  padding-top: 16px;
+  border-top: 1px solid rgba(247, 247, 247, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.boxText {
+  font-family: var(--font-family);
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  color: #f7f7f7;
+  opacity: 0.5;
+}

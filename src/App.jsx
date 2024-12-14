@@ -7,6 +7,7 @@ import YouTube from "./pages/YouTube";
 import Modal from "./components/Modal/Modal";
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -35,6 +36,8 @@ function App() {
         <Route path="/netflix" element={<Netflix />} />
         <Route path="/youtube" element={<YouTube />} />
       </Routes>
+
+      <Footer></Footer>
     </Router>
   );
 }

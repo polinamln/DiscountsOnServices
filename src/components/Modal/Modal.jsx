@@ -82,6 +82,7 @@ export default function Modal({ setModal }) {
             </li>
           </ul>
         </div>
+
         <div className={css.btns}>
           <button className={css.btnLogin} type="submit">
             Login

@@ -61,7 +61,7 @@ select {
 
 .container {
   padding: 0 24px;
-  width: 100%;
+  width: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +69,7 @@ select {
   margin-bottom: 100px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
     width: 768px;
@@ -77,9 +77,9 @@ select {
     flex-direction: column;
     align-items: center;
   }
-}
+} */
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .container {
     padding: 0 120px;
     width: 1440px;
@@ -87,4 +87,4 @@ select {
     flex-direction: column;
     align-items: center;
   }
-}
+} */

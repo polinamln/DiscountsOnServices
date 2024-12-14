@@ -2,7 +2,7 @@ import css from "./AboutUs.module.css";
 
 export default function AboutUs() {
   return (
-    <div className="container">
+    <div id="about" className="container">
       <h2 className={css.title}>About us</h2>
       <img className={css.img} src="/aboutimg.jpg" alt="woman"></img>
       <div className={css.card}>
