@@ -22,6 +22,19 @@
   align-items: center;
 }
 
+.cross {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background-color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crossIcon {
+  color: white;
+}
 .logo {
   width: 32px;
   height: 32px;
@@ -43,10 +56,14 @@
   background-color: var(--white);
   border-radius: 12px;
   padding: 16px;
+
+  width: 327px;
 }
 
 .link {
-  width: 295px;
+  /* width: 295px; */
+  width: 100%;
+
   height: 50px;
   border-radius: 8px;
   display: flex;
@@ -72,13 +89,14 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 327px;
 }
 
 .btnLogin {
   border: 1px solid var(--blue);
   border-radius: 12px;
   padding: 12px 40px;
-  width: 327px;
+  width: 100%;
   height: 43px;
   font-family: var(--font-family);
   font-weight: 700;
@@ -95,7 +113,7 @@
   background: var(--blue);
   border-radius: 12px;
   padding: 12px 40px;
-  width: 327px;
+  width: 100%;
   height: 43px;
   font-family: var(--font-family);
   font-weight: 700;
@@ -104,4 +122,18 @@
   letter-spacing: 0.01em;
   color: var(--white);
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 768px;
+  }
+
+  .listNav {
+    width: 500px;
+  }
+
+  .btns {
+    width: 500px;
+  }
 }

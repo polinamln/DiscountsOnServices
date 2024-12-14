@@ -16,9 +16,13 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .header {
     width: 1440px;
     height: 54px;
   }
-}
+
+  .burger {
+    display: none;
+  }
+} */

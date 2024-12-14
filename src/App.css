@@ -19,7 +19,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: var(--background);
 }
 
 body {
@@ -75,6 +74,7 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background);
 }
 
 @media screen and (min-width: 768px) {

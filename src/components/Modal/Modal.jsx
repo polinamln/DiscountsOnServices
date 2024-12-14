@@ -1,11 +1,14 @@
 import css from "./Modal.module.css";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Modal({ setModal }) {
   return (
     <div className={css.modal}>
       <div className={css.box}>
         <img className={css.logo} src="/logo.png" alt="logo"></img>
-        <p onClick={() => setModal(false)}>X</p>
+        <div className={css.cross} onClick={() => setModal(false)}>
+          <RxCross2 className={css.crossIcon} />
+        </div>
       </div>
       <div className={css.linksBox}>
         <div className={css.cardsBox}>
