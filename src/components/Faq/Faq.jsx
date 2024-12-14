@@ -36,38 +36,6 @@ export default function Faq() {
   return (
     <div id="faq" className="container">
       <h2 className={css.title}>FAQ</h2>
-      {/* <ul className={css.list}>
-        <li className={css.card}>
-          <p className={css.text}>
-            The set time has passed, but the invoice has not yet arrived, what
-            should I do?
-          </p>
-          <div className={css.btnArrow}>\/</div>
-        </li>
-
-        <li className={css.card}>
-          <p className={css.text}>
-            Can I add a phone number for password recovery?
-          </p>
-          <div className={css.btnArrow}>\/</div>
-        </li>
-        <li className={css.card}>
-          <p className={css.text}>
-            Can I change my Netflix account email and password after purchase?
-          </p>
-          <div className={css.btnArrow}>\/</div>
-        </li>
-        <li className={css.card}>
-          <p className={css.text}>
-            How soon will I receive the account information I ordered?
-          </p>
-          <div className={css.btnArrow}>\/</div>
-        </li>
-        <li className={css.card}>
-          <p className={css.text}>How to pay?</p>
-          <div className={css.btnArrow}>\/</div>
-        </li>
-      </ul> */}
 
       <ul className={css.list}>
         {items.map((item, index) => (
@@ -92,16 +60,6 @@ export default function Faq() {
       <a className={css.btn} href="#">
         Support
       </a>
-
-      <div className={css.cardBlue}>
-        <h3 className={css.cardBlueTitle}>
-          Request for an additional subscription that was not found here
-        </h3>
-        <p className={css.cardBlueText}>
-          Disney, Amazon Prime, Microsoft Office, Microsoft Windows
-        </p>
-        <button className={css.cardBlueBtn}>Request</button>
-      </div>
     </div>
   );
 }

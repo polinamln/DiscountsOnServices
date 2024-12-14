@@ -1,4 +1,7 @@
+import Faq from "../components/Faq/Faq";
+import InviteCard from "../components/InviteCard/InviteCard";
 import SubscriptionsCards from "../components/SubscriptionsCards/SubscriptionsCards";
+import css from "./YouTube.module.css";
 
 export default function Spotify() {
   const subscriptions = [
@@ -18,11 +21,19 @@ export default function Spotify() {
     },
   ];
   return (
-    <div className="container">
-      <p>Spotify</p>
-      {subscriptions.map((subscription, index) => {
-        return <SubscriptionsCards key={index} subscription={subscription} />;
-      })}
+    <div>
+      <div className="container">
+        <h2 className={css.title}>Choose a Spotify Plan</h2>
+        <p className={css.text}>
+          Select the subscription type for a period of{" "}
+          <span className={css.span}>12 months:</span>{" "}
+        </p>
+        {subscriptions.map((subscription, index) => {
+          return <SubscriptionsCards key={index} subscription={subscription} />;
+        })}
+      </div>
+      <InviteCard></InviteCard>
+      <Faq></Faq>
     </div>
   );
 }

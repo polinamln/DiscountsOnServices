@@ -1,5 +1,5 @@
+import { NavLink } from "react-router-dom";
 import css from "./ChooseASubscription.module.css";
-import LearnBtn from "../LearnBtn/LearnBtn";
 
 export default function ChooseASubscription() {
   return (
@@ -14,7 +14,9 @@ export default function ChooseASubscription() {
               The constant contributes to the task of the same and thus the
               intended features and the set relation to the check and set also.
             </p>
-            <LearnBtn></LearnBtn>
+            <NavLink className={css.btn} to="/netflix">
+              Learn more
+            </NavLink>
           </div>
         </li>
         <li className={css.item}>
@@ -26,7 +28,9 @@ export default function ChooseASubscription() {
               intended features and the set relation to the check and set also.
             </p>
 
-            <LearnBtn></LearnBtn>
+            <NavLink className={css.btn} to="/spotify">
+              Learn more
+            </NavLink>
           </div>
         </li>
         <li className={css.item}>
@@ -37,7 +41,9 @@ export default function ChooseASubscription() {
               The constant contributes to the task of the same and thus the
               intended features and the set relation to the check and set also.
             </p>
-            <LearnBtn></LearnBtn>
+            <NavLink className={css.btn} to="/youtube">
+              Learn more
+            </NavLink>
           </div>
         </li>
       </ul>

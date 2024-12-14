@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Faq from "../components/Faq/Faq";
+import BlueCard from "../components/BlueCard/BlueCard";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <HowItWorks></HowItWorks>
       <AboutUs id="about"></AboutUs>
       <Faq id="faq"></Faq>
+
+      <BlueCard></BlueCard>
     </div>
   );
 }
