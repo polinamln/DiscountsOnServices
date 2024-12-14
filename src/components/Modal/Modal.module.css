@@ -1,0 +1,108 @@
+.box {
+  background-color: var(--white);
+  padding: 11px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cardsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.linksBox {
+  background-color: var(--background);
+
+  padding: 24px 24px 40px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listNav {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.link {
+  width: 295px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+
+.link:hover {
+  background-color: #f7f7f7;
+}
+
+.linkText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #070033;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btnLogin {
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  padding: 12px 40px;
+  width: 327px;
+  height: 43px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: var(--blue);
+  cursor: pointer;
+
+  background-color: transparent;
+}
+
+.btnSign {
+  background: var(--blue);
+  border-radius: 12px;
+  padding: 12px 40px;
+  width: 327px;
+  height: 43px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  border: none;
+}
