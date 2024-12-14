@@ -2,7 +2,7 @@ import css from "./InviteCard.module.css";
 
 export default function InviteCard() {
   return (
-    <div className="container">
+    <div className="container" style={{ marginBottom: "0" }}>
       <div className={css.card}>
         <h3 className={css.cardTitle}>Invite friends</h3>
         <p className={css.cardText}>
