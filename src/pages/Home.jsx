@@ -5,6 +5,9 @@ import ChooseASubscription from "../components/ChooseASubscription/ChooseASubscr
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import Modal from "../components/Modal/Modal";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import AboutUs from "../components/AboutUs/AboutUs";
+import Faq from "../components/Faq/Faq";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
@@ -28,6 +31,9 @@ export default function Home() {
 
       <Hero></Hero>
       <ChooseASubscription></ChooseASubscription>
+      <HowItWorks></HowItWorks>
+      <AboutUs></AboutUs>
+      <Faq></Faq>
     </div>
   );
 }

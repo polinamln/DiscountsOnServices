@@ -1,0 +1,122 @@
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--black-2);
+  margin-bottom: 28px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.card {
+  border-radius: 24px;
+  width: 327px;
+  box-shadow: 0 12px 28px 0 rgba(244, 245, 245, 0.2);
+  background: var(--white);
+  padding: 20px;
+
+  gap: 20px;
+}
+
+.cardText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--black-2);
+  width: 226px;
+}
+
+.textLight {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--black-1);
+}
+
+.btnArrow {
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  background: rgba(23, 23, 23, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: var(--black-1);
+  border-radius: 16px;
+  padding: 16px 24px;
+  width: 243px;
+  height: 48px;
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 100px;
+}
+
+.cardBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardBlue {
+  border-radius: 24px;
+  width: 327px;
+  height: 314px;
+  box-shadow: 0 4px 24px 0 rgba(213, 216, 221, 0.2);
+  background: var(--blue);
+  padding: 40px 20px;
+}
+
+.cardBlueTitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cardBlueText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+.cardBlueBtn {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: 287px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+}

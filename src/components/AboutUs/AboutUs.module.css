@@ -1,0 +1,53 @@
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--black-2);
+  margin-bottom: 28px;
+}
+
+.img {
+  border-radius: 24px;
+  width: 327px;
+  height: 412px;
+  box-shadow: 0 7px 16px 0 rgba(244, 245, 245, 0.2);
+  background: var(--white), url("path_to_image");
+  margin-bottom: 16px;
+  object-fit: cover;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.card {
+  border-radius: 24px;
+  width: 327px;
+  height: 412px;
+  box-shadow: 0 2px 14px 0 rgba(213, 216, 221, 0.2);
+  background: var(--white);
+  padding: 14px 20px 26px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--black-1);
+  margin-bottom: 16px;
+}
+
+.textBold {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--black-2);
+}

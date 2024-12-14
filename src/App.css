@@ -58,16 +58,6 @@ select {
   color: inherit;
 }
 
-@media screen and (max-width: 376px) {
-  .container {
-    padding: 0 24px;
-    width: 375px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .container {
   padding: 0 24px;
   width: 100%;
@@ -75,6 +65,7 @@ select {
   flex-direction: column;
   align-items: center;
   background-color: var(--background);
+  padding-bottom: 100px;
 }
 
 @media screen and (min-width: 768px) {
