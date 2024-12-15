@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import css from "./PayModal.module.css";
 import { RxCross2 } from "react-icons/rx";
+import Icon from "../Icon";
 
 export default function PayModal({ setModalPay }) {
   const handleClose = (e) => {
@@ -16,17 +17,25 @@ export default function PayModal({ setModalPay }) {
           <RxCross2 className={css.crossIcon} />
         </div>
         <h2 className={css.title}>Purchase Payment</h2>
+
+        <div className={css.payBtns}>
+          <button type="button " className={css.payBtn}>
+            <Icon name="icon-GPay" h="18px" w="39px" />
+          </button>
+          <button type="button " className={css.payBtn}>
+            <Icon name="icon-APay" h="18px" w="39px" />
+          </button>
+        </div>
+
         <Formik
           initialValues={{ cardNumber: "", expirationDate: "", cvc: "" }}
           validate={(values) => {
             const errors = {};
-            // Validate Card Number
             if (!values.cardNumber) {
               errors.cardNumber = "Card number is required";
             } else if (!/^\d{4} \d{4} \d{4} \d{4}$/.test(values.cardNumber)) {
               errors.cardNumber = "Invalid card number format";
             }
-            // Validate Expiration Date (MM/YY)
             if (!values.expirationDate) {
               errors.expirationDate = "Expiration date is required";
             } else if (
@@ -34,7 +43,6 @@ export default function PayModal({ setModalPay }) {
             ) {
               errors.expirationDate = "Invalid expiration date format (MM/YY)";
             }
-            // Validate CVC
             if (!values.cvc) {
               errors.cvc = "CVC is required";
             } else if (!/^\d{3}$/.test(values.cvc)) {

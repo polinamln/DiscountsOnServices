@@ -1,3 +1,4 @@
+import Icon from "../Icon";
 import css from "./InviteCard.module.css";
 
 export default function InviteCard() {
@@ -13,7 +14,7 @@ export default function InviteCard() {
           <p className={css.cardLinkBoxTitle}>Click on the link</p>
           <a className={css.cardLink} href="#">
             Discounts On Services
-            <p>SVG</p>
+            <Icon name="icon-link" h="15.35px" w="13.81px" color="#171717" />
           </a>
         </div>
       </div>

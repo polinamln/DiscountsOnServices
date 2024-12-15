@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import css from "./Modal.module.css";
 import { RxCross2 } from "react-icons/rx";
+import Icon from "../Icon";
 
 export default function Modal({ setModal }) {
   return (
@@ -16,7 +17,12 @@ export default function Modal({ setModal }) {
           <ul className={css.listNav}>
             <li>
               <Link className={css.link} to="/" onClick={() => setModal(false)}>
-                <p>X</p>
+                <Icon
+                  name="icon-home"
+                  h="20px"
+                  w="18px"
+                  className={css.customIcon}
+                />
                 <p className={css.linkText}>Home</p>
               </Link>
             </li>
@@ -26,7 +32,13 @@ export default function Modal({ setModal }) {
                 href="/#about"
                 onClick={() => setModal(false)}
               >
-                <p>X</p>
+                <Icon
+                  name="icon-about"
+                  h="16px"
+                  w="16px"
+                  color="#9c99ad"
+                  className={css.customIcon}
+                />
                 <p className={css.linkText}>About</p>
               </a>
             </li>
@@ -36,7 +48,13 @@ export default function Modal({ setModal }) {
                 href="/#faq"
                 onClick={() => setModal(false)}
               >
-                <p>X</p>
+                <Icon
+                  name="icon-faq"
+                  h="20px"
+                  w="20px"
+                  color="#9c99ad"
+                  className={css.customIcon}
+                />
                 <p className={css.linkText}>FAQ</p>
               </a>
             </li>
@@ -46,7 +64,13 @@ export default function Modal({ setModal }) {
                 href="/#support"
                 onClick={() => setModal(false)}
               >
-                <p>X</p>
+                <Icon
+                  name="icon-sup"
+                  h="18px"
+                  w="20px"
+                  color="#9c99ad"
+                  className={css.customIcon}
+                />
                 <p className={css.linkText}>Support</p>
               </a>
             </li>

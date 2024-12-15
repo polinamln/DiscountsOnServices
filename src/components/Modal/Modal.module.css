@@ -130,6 +130,14 @@
   border: none;
 }
 
+.customIcon {
+  fill: #9c99ad;
+}
+
+li:hover .customIcon {
+  fill: var(--blue);
+}
+
 /* @media screen and (min-width: 768px) {
   .modal {
     width: 768px;

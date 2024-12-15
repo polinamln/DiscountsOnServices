@@ -1,5 +1,6 @@
 import { useState } from "react";
 import css from "./Faq.module.css";
+import Icon from "../Icon";
 
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -46,7 +47,13 @@ export default function Faq() {
                 onClick={() => toggleAccordion(index)}
                 className={css.btnArrow}
               >
-                {activeIndex === index ? "▲" : "▼"}
+                <Icon
+                  name={activeIndex === index ? "icon-arrow" : "icon-arrow-h"}
+                  h="6.67px"
+                  w="13.33px"
+                  color="#3a3a3c"
+                  className={css.customIcon}
+                />
               </div>
             </div>
 
