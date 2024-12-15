@@ -7,10 +7,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Faq from "../components/Faq/Faq";
 import BlueCard from "../components/BlueCard/BlueCard";
 
-export default function Home() {
+export default function Home({ setModalSub }) {
   return (
     <div>
-      <Hero></Hero>
+      <Hero setModalSub={setModalSub}></Hero>
       <ChooseASubscription></ChooseASubscription>
       <HowItWorks></HowItWorks>
       <AboutUs id="about"></AboutUs>

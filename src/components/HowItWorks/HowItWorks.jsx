@@ -3,7 +3,7 @@ import css from "./HowItWorks.module.css";
 
 export default function HowItWorks() {
   return (
-    <div className="container">
+    <div className="container" style={{ marginBottom: "0" }}>
       <h2 className={css.title}>How it works?</h2>
 
       <ul className={css.list}>

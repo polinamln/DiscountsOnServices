@@ -39,7 +39,7 @@ export default function YouTube() {
   ];
   return (
     <div>
-      <div className="container">
+      <div className="container" style={{ marginBottom: "0" }}>
         <h2 className={css.title}>Choose a YouTube Plan</h2>
         <p className={css.text}>
           Select the subscription type for a period of
