@@ -22,7 +22,7 @@ function App() {
   const [modalPay, setModalPay] = useState(false);
 
   useEffect(() => {
-    const isModalActive = modal || modalSub;
+    const isModalActive = modal;
     if (isModalActive) {
       document.body.style.overflow = "hidden";
     } else {
@@ -32,7 +32,7 @@ function App() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [modal, modalSub]);
+  }, [modal]);
 
   function ScrollToTop() {
     const location = useLocation();
