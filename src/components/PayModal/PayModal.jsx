@@ -3,11 +3,16 @@ import css from "./PayModal.module.css";
 import { RxCross2 } from "react-icons/rx";
 import Icon from "../Icon";
 
-export default function PayModal({ setModalPay }) {
+export default function PayModal({ setModalPay, setModalPaid }) {
   const handleClose = (e) => {
     if (e.target === e.currentTarget) {
       setModalPay(false);
     }
+  };
+
+  const handlePaid = () => {
+    setModalPaid(true);
+    setModalPay(false);
   };
 
   return (
@@ -117,6 +122,7 @@ export default function PayModal({ setModalPay }) {
                 type="submit"
                 disabled={isSubmitting}
                 className={css.button}
+                onClick={handlePaid}
               >
                 Pay with card
               </button>
@@ -165,6 +171,7 @@ export default function PayModal({ setModalPay }) {
                 type="submit"
                 disabled={isSubmitting}
                 className={css.button}
+                onClick={handlePaid}
               >
                 Pay
               </button>

@@ -15,11 +15,15 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import StartModal from "./components/StartModal/StartModal";
 import PayModal from "./components/PayModal/PayModal";
+import PaidModal from "./components/PaidModal/PaidModal";
+import SupModal from "./components/SupModal/SupModal";
 
 function App() {
   const [modal, setModal] = useState(false);
   const [modalSub, setModalSub] = useState(false);
   const [modalPay, setModalPay] = useState(false);
+  const [modalPaid, setModalPaid] = useState(false);
+  const [modalSup, setModalSup] = useState(false);
 
   useEffect(() => {
     const isModalActive = modal;
@@ -47,14 +51,23 @@ function App() {
       <ScrollToTop />
       <Header setModal={setModal}></Header>
 
-      {modalPay && <PayModal setModalPay={setModalPay} />}
+      {modalPay && (
+        <PayModal setModalPay={setModalPay} setModalPaid={setModalPaid} />
+      )}
 
       {modalSub && <StartModal setModalSub={setModalSub}></StartModal>}
 
       {modal && <Modal setModal={setModal}></Modal>}
 
+      {modalPaid && <PaidModal setModalPaid={setModalPaid}></PaidModal>}
+
+      {modalSup && <SupModal setModalSup={setModalSup}></SupModal>}
+
       <Routes>
-        <Route path="/" element={<Home setModalSub={setModalSub} />} />
+        <Route
+          path="/"
+          element={<Home setModalSub={setModalSub} setModalSup={setModalSup} />}
+        />
         <Route
           path="/spotify"
           element={<Spotify setModalPay={setModalPay} />}

@@ -7,7 +7,10 @@ export default function Footer() {
     <div className={css.footer}>
       <div className={css.footerContainer}>
         <div className={css.logoContainer}>
-          <img className={css.logo} src="/logo.png"></img>
+          <Link to="/">
+            <img className={css.logo} src="/logo.png"></img>
+          </Link>
+
           <p className={css.logoText}>DiscountsOnServices</p>
         </div>
         <p className={css.slogan}>It`s simple, fast and economical</p>

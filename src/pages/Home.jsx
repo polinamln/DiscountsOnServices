@@ -7,16 +7,16 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Faq from "../components/Faq/Faq";
 import BlueCard from "../components/BlueCard/BlueCard";
 
-export default function Home({ setModalSub }) {
+export default function Home({ setModalSub, setModalSup }) {
   return (
     <div>
       <Hero setModalSub={setModalSub}></Hero>
       <ChooseASubscription></ChooseASubscription>
       <HowItWorks></HowItWorks>
       <AboutUs id="about"></AboutUs>
-      <Faq id="faq"></Faq>
+      <Faq id="faq" setModalSup={setModalSup}></Faq>
 
-      <BlueCard></BlueCard>
+      <BlueCard setModalSub={setModalSub}></BlueCard>
     </div>
   );
 }

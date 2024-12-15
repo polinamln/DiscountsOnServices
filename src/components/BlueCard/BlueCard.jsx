@@ -1,6 +1,6 @@
 import css from "./BlueCard.module.css";
 
-export default function BlueCard() {
+export default function BlueCard({ setModalSub }) {
   return (
     <div className="container">
       <div className={css.cardBlue}>
@@ -10,7 +10,9 @@ export default function BlueCard() {
         <p className={css.cardBlueText}>
           Disney, Amazon Prime, Microsoft Office, Microsoft Windows
         </p>
-        <button className={css.cardBlueBtn}>Request</button>
+        <button onClick={() => setModalSub(true)} className={css.cardBlueBtn}>
+          Request
+        </button>
       </div>
     </div>
   );

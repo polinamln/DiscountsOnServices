@@ -2,7 +2,7 @@ import { useState } from "react";
 import css from "./Faq.module.css";
 import Icon from "../Icon";
 
-export default function Faq() {
+export default function Faq({ setModalSup }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const items = [
@@ -64,9 +64,14 @@ export default function Faq() {
         ))}
       </ul>
 
-      <a className={css.btn} href="#">
+      <button
+        type="button"
+        onClick={() => setModalSup(true)}
+        className={css.btn}
+        href="#"
+      >
         Support
-      </a>
+      </button>
     </div>
   );
 }
