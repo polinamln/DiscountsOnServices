@@ -3,7 +3,7 @@ import InviteCard from "../components/InviteCard/InviteCard";
 import SubscriptionsCards from "../components/SubscriptionsCards/SubscriptionsCards";
 import css from "./YouTube.module.css";
 
-export default function Spotify() {
+export default function Spotify({ setModalPay }) {
   const subscriptions = [
     {
       name: "Music",
@@ -29,7 +29,13 @@ export default function Spotify() {
           <span className={css.span}>12 months:</span>{" "}
         </p>
         {subscriptions.map((subscription, index) => {
-          return <SubscriptionsCards key={index} subscription={subscription} />;
+          return (
+            <SubscriptionsCards
+              setModalPay={setModalPay}
+              key={index}
+              subscription={subscription}
+            />
+          );
         })}
       </div>
       <InviteCard></InviteCard>

@@ -2,7 +2,7 @@ import css from "./SubscriptionsCards.module.css";
 
 import { MdOutlineDone } from "react-icons/md";
 
-export default function SubscriptionsCards({ subscription }) {
+export default function SubscriptionsCards({ subscription, setModalPay }) {
   return (
     <div className={css.card}>
       <h3 className={css.title}>{subscription.name}</h3>
@@ -20,7 +20,11 @@ export default function SubscriptionsCards({ subscription }) {
         <span>$</span>
         {subscription.price}
       </p>
-      <button className={css.btn} type="button">
+      <button
+        onClick={() => setModalPay(true)}
+        className={css.btn}
+        type="button"
+      >
         {subscription.buttonText}
       </button>
     </div>

@@ -5,7 +5,7 @@ import Faq from "../components/Faq/Faq";
 import InviteCard from "../components/InviteCard/InviteCard";
 import SubscriptionsCards from "../components/SubscriptionsCards/SubscriptionsCards";
 
-export default function Netflix() {
+export default function Netflix({ setModalPay }) {
   const subscriptions = [
     {
       name: "Premium",
@@ -46,7 +46,13 @@ export default function Netflix() {
         </div>
 
         {subscriptions.map((subscription, index) => {
-          return <SubscriptionsCards key={index} subscription={subscription} />;
+          return (
+            <SubscriptionsCards
+              setModalPay={setModalPay}
+              key={index}
+              subscription={subscription}
+            />
+          );
         })}
       </div>
       <InviteCard></InviteCard>

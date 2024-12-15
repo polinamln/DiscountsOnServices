@@ -4,7 +4,7 @@ import SubscriptionsCards from "../components/SubscriptionsCards/SubscriptionsCa
 
 import css from "./YouTube.module.css";
 
-export default function YouTube() {
+export default function YouTube({ setModalPay }) {
   const subscriptions = [
     {
       name: "Basic",
@@ -46,7 +46,13 @@ export default function YouTube() {
           <span className={css.span}>12 months:</span>
         </p>
         {subscriptions.map((subscription, index) => {
-          return <SubscriptionsCards key={index} subscription={subscription} />;
+          return (
+            <SubscriptionsCards
+              setModalPay={setModalPay}
+              key={index}
+              subscription={subscription}
+            />
+          );
         })}
       </div>
       <InviteCard></InviteCard>

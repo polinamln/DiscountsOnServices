@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import css from "./StartModal.module.css";
 import { RxCross2 } from "react-icons/rx";
 
-export default function StartModal({ setModalSub, setModalPay }) {
+export default function StartModal({ setModalSub }) {
   const handleClose = (e) => {
     if (e.target === e.currentTarget) {
       setModalSub(false);
@@ -11,7 +11,6 @@ export default function StartModal({ setModalSub, setModalPay }) {
 
   const handleModals = () => {
     setModalSub(false);
-    setModalPay(true);
   };
 
   return (

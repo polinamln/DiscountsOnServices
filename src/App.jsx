@@ -49,20 +49,24 @@ function App() {
 
       {modalPay && <PayModal setModalPay={setModalPay} />}
 
-      {modalSub && (
-        <StartModal
-          setModalPay={setModalPay}
-          setModalSub={setModalSub}
-        ></StartModal>
-      )}
+      {modalSub && <StartModal setModalSub={setModalSub}></StartModal>}
 
       {modal && <Modal setModal={setModal}></Modal>}
 
       <Routes>
         <Route path="/" element={<Home setModalSub={setModalSub} />} />
-        <Route path="/spotify" element={<Spotify />} />
-        <Route path="/netflix" element={<Netflix />} />
-        <Route path="/youtube" element={<YouTube />} />
+        <Route
+          path="/spotify"
+          element={<Spotify setModalPay={setModalPay} />}
+        />
+        <Route
+          path="/netflix"
+          element={<Netflix setModalPay={setModalPay} />}
+        />
+        <Route
+          path="/youtube"
+          element={<YouTube setModalPay={setModalPay} />}
+        />
       </Routes>
 
       <Footer></Footer>
