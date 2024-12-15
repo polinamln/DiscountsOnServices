@@ -4,8 +4,15 @@ import Faq from "../components/Faq/Faq";
 
 import InviteCard from "../components/InviteCard/InviteCard";
 import SubscriptionsCards from "../components/SubscriptionsCards/SubscriptionsCards";
+import { useState } from "react";
 
 export default function Netflix({ setModalPay }) {
+  const [activeCard, setActiveCard] = useState("F");
+
+  const handleCardClick = (cardType) => {
+    setActiveCard(cardType);
+  };
+
   const subscriptions = [
     {
       name: "Premium",
@@ -15,6 +22,7 @@ export default function Netflix({ setModalPay }) {
         "On-demand playback",
       ],
       price: 80,
+      priceTwo: 150,
       buttonText: "Get started",
     },
     {
@@ -26,6 +34,7 @@ export default function Netflix({ setModalPay }) {
         "Exclusive content",
       ],
       price: 100,
+      priceTwo: 190,
       buttonText: "Get started",
     },
   ];
@@ -37,17 +46,36 @@ export default function Netflix({ setModalPay }) {
         <p className={css.text}>Watch without limits at a bargain price</p>
 
         <div className={css.card}>
-          <div className={css.cardF}>
-            <p className={css.cardText}>6 months</p>
+          <div
+            onClick={() => handleCardClick("F")}
+            className={`${css.cardF} ${activeCard === "F" ? css.activeF : ""}`}
+          >
+            <p
+              className={`${css.cardText} ${
+                activeCard === "F" ? css.cardTextActive : ""
+              }`}
+            >
+              6 months
+            </p>
           </div>
-          <div className={css.cardS}>
-            <p className={css.cardTextS}>12 months</p>
+          <div
+            onClick={() => handleCardClick("S")}
+            className={`${css.cardS} ${activeCard === "S" ? css.activeS : ""}`}
+          >
+            <p
+              className={`${css.cardText} ${
+                activeCard === "S" ? css.cardTextActive : ""
+              }`}
+            >
+              12 months
+            </p>
           </div>
         </div>
 
         {subscriptions.map((subscription, index) => {
           return (
             <SubscriptionsCards
+              activeCard={activeCard}
               setModalPay={setModalPay}
               key={index}
               subscription={subscription}

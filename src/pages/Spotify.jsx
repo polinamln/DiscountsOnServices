@@ -26,7 +26,7 @@ export default function Spotify({ setModalPay }) {
         <h2 className={css.title}>Choose a Spotify Plan</h2>
         <p className={css.text}>
           Select the subscription type for a period of{" "}
-          <span className={css.span}>12 months:</span>{" "}
+          <span className={css.span}> 12 months:</span>{" "}
         </p>
         {subscriptions.map((subscription, index) => {
           return (
