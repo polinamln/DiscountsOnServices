@@ -158,7 +158,7 @@ export default function PayModal({ setModalPay }) {
                 disabled={isSubmitting}
                 className={css.button}
               >
-                Pay with card
+                Pay
               </button>
             </Form>
           )}
