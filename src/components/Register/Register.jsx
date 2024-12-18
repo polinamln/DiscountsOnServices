@@ -3,18 +3,16 @@ import css from "./Register.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 export default function Register({ setModalRegister, setModalLogin }) {
-
-  const handleLogin = ( ) => {
-    setModalLogin(true)
-    setModalRegister(false)
-  }
-
+  const handleLogin = () => {
+    setModalLogin(true);
+    setModalRegister(false);
+  };
 
   return (
     <div className={css.modal}>
       <div className={css.box}>
         <img className={css.logo} src="/logo.png" alt="logo"></img>
-        <div className={css.cross} onClick={ handleLogin}>
+        <div className={css.cross} onClick={() => setModalRegister(false)}>
           <RxCross2 className={css.crossIcon} />
         </div>
       </div>
@@ -23,7 +21,7 @@ export default function Register({ setModalRegister, setModalLogin }) {
         <h className={css.title}>Create an account</h>
         <div className={css.textBoxLink}>
           <p className={css.newUser}>Already have an account?</p>
-          <p onCLick={() => setModalLogin(true)} className={css.create} >
+          <p onClick={handleLogin} className={css.create}>
             Sign In
           </p>
         </div>

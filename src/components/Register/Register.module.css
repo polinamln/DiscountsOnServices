@@ -23,6 +23,7 @@
   padding: 0 24px 32px;
 
   width: 375px;
+  overflow-y: auto;
 }
 
 .title {
@@ -63,6 +64,7 @@
   line-height: 150%;
   letter-spacing: 0.01em;
   color: var(--blue);
+  cursor: pointer;
 }
 
 .cross {

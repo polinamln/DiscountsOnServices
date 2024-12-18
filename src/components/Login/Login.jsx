@@ -2,7 +2,12 @@ import { RxCross2 } from "react-icons/rx";
 import css from "./Login.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-export default function Login({ setModalLogin }) {
+export default function Login({ setModalLogin, setModalRegister }) {
+  const handleRegister = () => {
+    setModalLogin(false);
+    setModalRegister(true);
+  };
+
   return (
     <div className={css.modal}>
       <div className={css.box}>
@@ -16,9 +21,9 @@ export default function Login({ setModalLogin }) {
         <h className={css.title}>Log in</h>
         <div className={css.textBoxLink}>
           <p className={css.newUser}>New user? </p>
-          <a className={css.create} href="#">
+          <p className={css.create} onClick={handleRegister}>
             Create an account
-          </a>
+          </p>
         </div>
       </div>
 
