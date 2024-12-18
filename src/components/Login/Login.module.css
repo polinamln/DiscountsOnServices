@@ -24,6 +24,7 @@
 
   width: 375px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .title {

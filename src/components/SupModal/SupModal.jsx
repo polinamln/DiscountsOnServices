@@ -20,6 +20,9 @@ export default function StartModal({ setModalSup }) {
           <RxCross2 className={css.crossIcon} />
         </div>
         <h2 className={css.title}>Support Application</h2>
+        <p className={css.text}>
+          We will call you within <span>an hour!</span>
+        </p>
         <Formik
           initialValues={{ name: "", email: "", phone: "" }}
           validate={(values) => {

@@ -19,9 +19,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  justify-content: center; /* Центрируем содержимое */
-  align-items: center; /* Центрируем содержимое по вертикали */
-  overflow: hidden; /* Скрываем прокрутку для бекдропа */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
   z-index: 9999;
 }
@@ -34,7 +34,27 @@
   letter-spacing: 0.01em;
   color: var(--black-2);
 
+  margin-bottom: 12px;
+}
+
+.text {
   margin-bottom: 36px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.text span {
+  margin-bottom: 36px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: var(--blue);
 }
 
 .fieldWrapper {
