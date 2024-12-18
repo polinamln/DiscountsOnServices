@@ -17,6 +17,8 @@ import StartModal from "./components/StartModal/StartModal";
 import PayModal from "./components/PayModal/PayModal";
 import PaidModal from "./components/PaidModal/PaidModal";
 import SupModal from "./components/SupModal/SupModal";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -24,9 +26,12 @@ function App() {
   const [modalPay, setModalPay] = useState(false);
   const [modalPaid, setModalPaid] = useState(false);
   const [modalSup, setModalSup] = useState(false);
+  const [modalLogin, setModalLogin] = useState(false);
+  const [modalRegister, setModalRegister] = useState(false);
+  // const [user, setUser] = useState(false);
 
   useEffect(() => {
-    const isModalActive = modal;
+    const isModalActive = modal || modalLogin || modalRegister;
     if (isModalActive) {
       document.body.style.overflow = "hidden";
     } else {
@@ -36,7 +41,7 @@ function App() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [modal]);
+  }, [modal, modalLogin, modalRegister]);
 
   function ScrollToTop() {
     const location = useLocation();
@@ -57,11 +62,25 @@ function App() {
 
       {modalSub && <StartModal setModalSub={setModalSub}></StartModal>}
 
-      {modal && <Modal setModal={setModal}></Modal>}
+      {modal && (
+        <Modal
+          setModal={setModal}
+          setModalRegister={setModalRegister}
+          setModalLogin={setModalLogin}
+        ></Modal>
+      )}
 
       {modalPaid && <PaidModal setModalPaid={setModalPaid}></PaidModal>}
 
       {modalSup && <SupModal setModalSup={setModalSup}></SupModal>}
+
+{/* USER */}
+
+      {modalLogin && <Login setModalRegister={setModalRegister} 
+      setModalLogin={setModalLogin}></Login>}
+      {modalRegister && (
+        <Register setModalRegister={setModalRegister} setModalLogin={setModalLogin}></Register>
+      )}
 
       <Routes>
         <Route

@@ -1,0 +1,200 @@
+.box {
+  background-color: var(--white);
+  padding: 11px 24px;
+  width: 375px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(227, 227, 227, 0.2);
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: var(--white);
+  height: 100%;
+  padding: 0 24px 32px;
+
+  width: 375px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: var(--black-2);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.textBox {
+  margin-top: 38px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.textBoxLink {
+  display: flex;
+  gap: 5px;
+}
+
+.newUser {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.create {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: var(--blue);
+}
+
+.cross {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background-color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crossIcon {
+  color: white;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.btnLogin {
+  border-radius: 12px;
+  background-color: var(--blue);
+  width: 100%;
+  border: none;
+  height: 54px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.checkbox {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: var(--black-2);
+  margin-bottom: 32px;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #1b1b29;
+
+  margin-bottom: 12px;
+}
+
+.input {
+  padding: 16px 24px;
+  background-color: #f1f4f8;
+  border: none;
+  width: 100%;
+  height: 51px;
+  border-radius: 12px;
+}
+
+.error {
+  margin-top: 5px;
+  font-family: var(--font-family);
+  font-size: 10px;
+  color: var(--red);
+}
+
+.forgot {
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #0f0f0f;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.boxS {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.line {
+  height: 1px;
+  background-color: #dfdfdf;
+  width: 100px;
+}
+.lineText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #909090;
+}
+
+.loginList {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.loginListItem {
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+  padding: 13px 41px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.texts {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #9c99ad;
+}

@@ -11,8 +11,8 @@
 
   padding: 48px 24px 40px;
   border-radius: 12px;
-  max-height: 90vh; /* Ограничиваем максимальную высоту */
-  overflow-y: auto; /* Включаем вертикальную прокрутку, если нужно */
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .back {
@@ -26,9 +26,9 @@
 
   padding-bottom: 100px;
 
-  justify-content: center; /* Центрируем содержимое */
-  align-items: center; /* Центрируем содержимое по вертикали */
-  overflow: hidden; /* Скрываем прокрутку для бекдропа */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
   z-index: 9999;
 }

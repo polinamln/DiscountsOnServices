@@ -3,7 +3,18 @@ import css from "./Modal.module.css";
 import { RxCross2 } from "react-icons/rx";
 import Icon from "../Icon";
 
-export default function Modal({ setModal }) {
+export default function Modal({ setModal, setModalLogin, setModalRegister }) {
+  const handleAction = (action) => {
+    if (action === "login") {
+      setModalLogin(true);
+    } else if (action === "register") {
+      setModalRegister(true);
+    }
+    setModal(false);
+
+    document.body.style.overflow = "hidden";
+  };
+
   return (
     <div className={css.modal}>
       <div className={css.box}>
@@ -61,7 +72,7 @@ export default function Modal({ setModal }) {
             <li>
               <a
                 className={css.link}
-                href="/#support"
+                href="/#faq"
                 onClick={() => setModal(false)}
               >
                 <Icon
@@ -108,10 +119,18 @@ export default function Modal({ setModal }) {
         </div>
 
         <div className={css.btns}>
-          <button className={css.btnLogin} type="submit">
+          <button
+            onClick={() => handleAction("login")}
+            className={css.btnLogin}
+            type="submit"
+          >
             Login
           </button>
-          <button className={css.btnSign} type="submit">
+          <button
+            onClick={() => handleAction("register")}
+            className={css.btnSign}
+            type="submit"
+          >
             Sign up
           </button>
         </div>

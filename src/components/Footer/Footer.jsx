@@ -56,7 +56,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className={css.link} href="/#support">
+                <a className={css.link} href="/#faq">
                   <p className={css.linkText}>Support</p>
                 </a>
               </li>
