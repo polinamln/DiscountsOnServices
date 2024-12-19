@@ -133,22 +133,13 @@ export default function Register({ setModalRegister, setModalLogin }) {
 
       <ul className={css.loginList}>
         <li className={css.loginListItem}>
-          <img
-            className={css.loginListImg}
-            src="../../../public/image10.png"
-          ></img>
+          <img className={css.loginListImg} src="/image10.png"></img>
         </li>
         <li className={css.loginListItem}>
-          <img
-            className={css.loginListImg}
-            src="../../../public/image11.png"
-          ></img>
+          <img className={css.loginListImg} src="/image11.png"></img>
         </li>
         <li className={css.loginListItem}>
-          <img
-            className={css.loginListImg}
-            src="../../../public/image12.png"
-          ></img>
+          <img className={css.loginListImg} src="/image12.png"></img>
         </li>
       </ul>
 
