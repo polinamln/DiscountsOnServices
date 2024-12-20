@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routes/userRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -9,6 +10,7 @@ const DB_URI = process.env.DB_URI;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 mongoose
   .connect(DB_URI)

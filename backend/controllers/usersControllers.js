@@ -15,15 +15,18 @@ export const userRegister = async (req, res, next) => {
     if (existingUser) {
       return res.status(400).json({ message: "User already exists" });
     }
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
 
     const newUser = await User.create({
       name,
       email,
       password: hashPassword,
     });
-    res
-      .status(200)
-      .json({ user: { name: newUser.name, email: newUser.email } });
+    res.status(200).json({
+      user: { id: newUser._id, name: newUser.name, email: newUser.email },
+    });
   } catch (e) {
     next(e);
   }

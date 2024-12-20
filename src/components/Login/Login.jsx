@@ -28,14 +28,14 @@ export default function Login({ setModalLogin, setModalRegister }) {
       </div>
 
       <Formik
-        initialValues={{ password: "", emailAddress: "" }}
+        initialValues={{ password: "", email: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.password) {
             errors.password = "Password is required";
           }
-          if (!values.emailAddress) {
-            errors.emailAddress = "Email is required";
+          if (!values.email) {
+            errors.email = "Email is required";
           }
           return errors;
         }}
@@ -47,18 +47,18 @@ export default function Login({ setModalLogin, setModalRegister }) {
         {({ isSubmitting }) => (
           <Form className={css.form}>
             <div className={css.fieldWrapper}>
-              <label htmlFor="emailAddress" className={css.label}>
+              <label htmlFor="email" className={css.label}>
                 Email Address
               </label>
               <Field
                 type="text"
-                name="emailAddress"
-                id="emailAddress"
+                name="email"
+                id="email"
                 placeholder="Enter your e-mail"
                 className={css.input}
               />
               <ErrorMessage
-                name="emailAddress"
+                name="email"
                 component="div"
                 className={css.error}
               />

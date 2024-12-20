@@ -1,12 +1,18 @@
 import { RxCross2 } from "react-icons/rx";
 import css from "./Register.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { register } from "../../api";
 
-export default function Register({ setModalRegister, setModalLogin }) {
-  const handleLogin = () => {
-    setModalLogin(true);
-    setModalRegister(false);
-  };
+export default function Register({ setModalRegister }) {
+  // const handleSubmit = async (values) => {
+  //   // e.preventDefault();
+  //   try {
+  //     const res = await register(values);
+  //     console.log(res);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <div className={css.modal}>
@@ -18,68 +24,71 @@ export default function Register({ setModalRegister, setModalLogin }) {
       </div>
 
       <div className={css.textBox}>
-        <h className={css.title}>Create an account</h>
+        <h2 className={css.title}>Create an account</h2>
         <div className={css.textBoxLink}>
           <p className={css.newUser}>Already have an account?</p>
-          <p onClick={handleLogin} className={css.create}>
-            Sign In
-          </p>
+          <p className={css.create}>Sign In</p>
         </div>
       </div>
 
       <Formik
-        initialValues={{ password: "", emailAddress: "", userName: "" }}
+        initialValues={{ password: "", email: "", name: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.password) {
             errors.password = "Password is required";
           }
-          if (!values.emailAddress) {
-            errors.emailAddress = "Email is required";
+          if (!values.email) {
+            errors.email = "Email is required";
           }
-          if (!values.userName) {
-            errors.emailAddress = "User name is required";
+          if (!values.name) {
+            errors.name = "User name is required";
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("Form submitted with values:", values);
-          setSubmitting(false);
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          try {
+            const res = await register(values);
+            console.log("Form submitted with values:", values);
+            console.log(res);
+            resetForm();
+          } catch (e) {
+            console.log("Server response:", e.response);
+            alert(e.response.data.message || "An error occurred");
+          } finally {
+            setSubmitting(false);
+          }
         }}
       >
         {({ isSubmitting }) => (
           <Form className={css.form}>
             <div className={css.fieldWrapper}>
-              <label htmlFor="userName" className={css.label}>
+              <label htmlFor="name" className={css.label}>
                 User name
               </label>
               <Field
                 type="text"
-                name="userName"
-                id="userName"
+                name="name"
+                id="name"
                 placeholder="Enter your name"
                 className={css.input}
               />
-              <ErrorMessage
-                name="userName"
-                component="div"
-                className={css.error}
-              />
+              <ErrorMessage name="name" component="div" className={css.error} />
             </div>
 
             <div className={css.fieldWrapper}>
-              <label htmlFor="emailAddress" className={css.label}>
+              <label htmlFor="email" className={css.label}>
                 Email Address
               </label>
               <Field
                 type="text"
-                name="emailAddress"
-                id="emailAddress"
+                name="email"
+                id="email"
                 placeholder="Enter your e-mail"
                 className={css.input}
               />
               <ErrorMessage
-                name="emailAddress"
+                name="email"
                 component="div"
                 className={css.error}
               />
