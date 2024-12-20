@@ -2,17 +2,10 @@ import { RxCross2 } from "react-icons/rx";
 import css from "./Register.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { register } from "../../api";
+import { useNavigate } from "react-router-dom";
 
 export default function Register({ setModalRegister }) {
-  // const handleSubmit = async (values) => {
-  //   // e.preventDefault();
-  //   try {
-  //     const res = await register(values);
-  //     console.log(res);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+  const navigate = useNavigate();
 
   return (
     <div className={css.modal}>
@@ -48,13 +41,22 @@ export default function Register({ setModalRegister }) {
         }}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           try {
-            const res = await register(values);
+            const res = await register({
+              name: values.name,
+              email: values.email,
+              password: values.password,
+            });
+
             console.log("Form submitted with values:", values);
-            console.log(res);
+            console.log("user info:", res);
+
             resetForm();
+
+            if (res.user) {
+              navigate("/");
+            }
           } catch (e) {
             console.log("Server response:", e.response);
-            alert(e.response.data.message || "An error occurred");
           } finally {
             setSubmitting(false);
           }

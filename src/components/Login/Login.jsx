@@ -1,12 +1,11 @@
 import { RxCross2 } from "react-icons/rx";
 import css from "./Login.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { login } from "../../api";
+import { useNavigate } from "react-router-dom";
 
-export default function Login({ setModalLogin, setModalRegister }) {
-  const handleRegister = () => {
-    setModalLogin(false);
-    setModalRegister(true);
-  };
+export default function Login({ setModalLogin }) {
+  const navigate = useNavigate();
 
   return (
     <div className={css.modal}>
@@ -18,12 +17,10 @@ export default function Login({ setModalLogin, setModalRegister }) {
       </div>
 
       <div className={css.textBox}>
-        <h className={css.title}>Log in</h>
+        <h2 className={css.title}>Log in</h2>
         <div className={css.textBoxLink}>
           <p className={css.newUser}>New user? </p>
-          <p className={css.create} onClick={handleRegister}>
-            Create an account
-          </p>
+          <p className={css.create}>Create an account</p>
         </div>
       </div>
 
@@ -39,9 +36,28 @@ export default function Login({ setModalLogin, setModalRegister }) {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("Form submitted with values:", values);
-          setSubmitting(false);
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          try {
+            const res = await login(values);
+
+            const { token } = res.user;
+
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", JSON.stringify(res.user));
+
+            navigate("/");
+            console.log("Form submitted with values:", {
+              email: values.email,
+              password: values.password,
+            });
+            console.log("user info:", res);
+
+            resetForm();
+          } catch (e) {
+            console.error(e);
+          } finally {
+            setSubmitting(false);
+          }
         }}
       >
         {({ isSubmitting }) => (
@@ -105,13 +121,13 @@ export default function Login({ setModalLogin, setModalRegister }) {
 
       <ul className={css.loginList}>
         <li className={css.loginListItem}>
-          <img className={css.loginListImg} src="/image 10.png"></img>
+          <img className={css.loginListImg} src="/image10.png"></img>
         </li>
         <li className={css.loginListItem}>
-          <img className={css.loginListImg} src="/image 11.png"></img>
+          <img className={css.loginListImg} src="/image11.png"></img>
         </li>
         <li className={css.loginListItem}>
-          <img className={css.loginListImg} src="/image 12.png"></img>
+          <img className={css.loginListImg} src="/image12.png"></img>
         </li>
       </ul>
 
