@@ -2,10 +2,10 @@ import { RxCross2 } from "react-icons/rx";
 import css from "./Register.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { register } from "../../api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function Register({ setModalRegister }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className={css.modal}>
@@ -52,9 +52,7 @@ export default function Register({ setModalRegister }) {
 
             resetForm();
 
-            if (res.user) {
-              navigate("/");
-            }
+            window.location.href = "/";
           } catch (e) {
             console.log("Server response:", e.response);
           } finally {

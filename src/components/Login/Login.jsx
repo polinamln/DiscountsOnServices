@@ -2,10 +2,10 @@ import { RxCross2 } from "react-icons/rx";
 import css from "./Login.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { login } from "../../api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function Login({ setModalLogin }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className={css.modal}>
@@ -45,7 +45,7 @@ export default function Login({ setModalLogin }) {
             localStorage.setItem("token", token);
             localStorage.setItem("user", JSON.stringify(res.user));
 
-            navigate("/");
+            window.location.href = "/";
             console.log("Form submitted with values:", {
               email: values.email,
               password: values.password,

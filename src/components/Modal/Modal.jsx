@@ -2,8 +2,23 @@ import { Link } from "react-router-dom";
 import css from "./Modal.module.css";
 import { RxCross2 } from "react-icons/rx";
 import Icon from "../Icon";
+import { useEffect, useState } from "react";
 
 export default function Modal({ setModal, setModalLogin, setModalRegister }) {
+  const [activeUser, setActiveUser] = useState(false);
+
+  const checkActiveUser = () => {
+    const user = localStorage.getItem("user");
+    console.log("Stored user:", user);
+    if (user) {
+      setActiveUser(true);
+    }
+  };
+
+  useEffect(() => {
+    checkActiveUser();
+  }, []);
+
   const handleAction = (action) => {
     if (action === "login") {
       setModalLogin(true);
@@ -118,22 +133,26 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
           </ul>
         </div>
 
-        <div className={css.btns}>
-          <button
-            onClick={() => handleAction("login")}
-            className={css.btnLogin}
-            type="submit"
-          >
-            Login
-          </button>
-          <button
-            onClick={() => handleAction("register")}
-            className={css.btnSign}
-            type="submit"
-          >
-            Sign up
-          </button>
-        </div>
+        {activeUser ? (
+          <p>logout</p>
+        ) : (
+          <div className={css.btns}>
+            <button
+              onClick={() => handleAction("login")}
+              className={css.btnLogin}
+              type="submit"
+            >
+              Login
+            </button>
+            <button
+              onClick={() => handleAction("register")}
+              className={css.btnSign}
+              type="submit"
+            >
+              Sign up
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
