@@ -32,7 +32,7 @@ export const userRegister = async (req, res, next) => {
 export const userLogin = async (req, res, next) => {
   const { email, password } = req.body;
   try {
-    const user = User.findOne({ email });
+    const user = await User.findOne({ email });
 
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res

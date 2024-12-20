@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-// import userRouter from "./routes/userRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ mongoose
     process.exit(1);
   });
 
-// app.use("api/users", userRouter);
+app.use("/api/users", userRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);
