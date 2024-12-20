@@ -74,12 +74,14 @@ function App() {
 
       {modalSup && <SupModal setModalSup={setModalSup}></SupModal>}
 
-{/* USER */}
+      {/* USER */}
 
-      {modalLogin && <Login setModalRegister={setModalRegister} 
-      setModalLogin={setModalLogin}></Login>}
+      {modalLogin && <Login setModalLogin={setModalLogin}></Login>}
       {modalRegister && (
-        <Register setModalRegister={setModalRegister} setModalLogin={setModalLogin}></Register>
+        <Register
+          setModalRegister={setModalRegister}
+          setModalLogin={setModalLogin}
+        ></Register>
       )}
 
       <Routes>

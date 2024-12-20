@@ -4,8 +4,25 @@ import { RxCross2 } from "react-icons/rx";
 import Icon from "../Icon";
 import { useEffect, useState } from "react";
 
+import { logout } from "../../api";
+
 export default function Modal({ setModal, setModalLogin, setModalRegister }) {
   const [activeUser, setActiveUser] = useState(false);
+
+  const handleLogout = async () => {
+    const user = localStorage.getItem("user");
+
+    const userId = user ? user.id : null;
+
+    try {
+      await logout({ userId });
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      window.location.href = "/";
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const checkActiveUser = () => {
     const user = localStorage.getItem("user");
@@ -40,6 +57,18 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
       </div>
       <div className={css.linksBox}>
         <div className={css.cardsBox}>
+          <Link className={css.linkUser} to="#" onClick={() => setModal(false)}>
+            <div className={css.iconBack}>
+              <Icon
+                name="icon-user"
+                h="20px"
+                w="20px"
+                className={css.customIcon}
+              />
+            </div>
+
+            <p className={css.linkText}>Home</p>
+          </Link>
           <ul className={css.listNav}>
             <li>
               <Link className={css.link} to="/" onClick={() => setModal(false)}>
@@ -134,7 +163,14 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
         </div>
 
         {activeUser ? (
-          <p style={{ marginBottom: "100px" }}>logout</p>
+          <button
+            type="submit"
+            onClick={handleLogout}
+            className={css.logoutBtn}
+          >
+            <Icon name="icon-logout" h="24px" w="24px" color="#333333" />
+            <p>Log out</p>
+          </button>
         ) : (
           <div className={css.btns}>
             <button

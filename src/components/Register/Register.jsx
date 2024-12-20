@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { register } from "../../api";
 // import { useNavigate } from "react-router-dom";
 
-export default function Register({ setModalRegister }) {
+export default function Register({ setModalRegister, setModalLogin }) {
   // const navigate = useNavigate();
 
   return (
@@ -51,8 +51,8 @@ export default function Register({ setModalRegister }) {
             console.log("user info:", res);
 
             resetForm();
-
-            window.location.href = "/";
+            setModalLogin(true);
+            setModalRegister(false);
           } catch (e) {
             console.log("Server response:", e.response);
           } finally {
