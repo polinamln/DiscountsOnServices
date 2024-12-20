@@ -134,7 +134,7 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
         </div>
 
         {activeUser ? (
-          <p>logout</p>
+          <p style={{ marginBottom: "100px" }}>logout</p>
         ) : (
           <div className={css.btns}>
             <button
