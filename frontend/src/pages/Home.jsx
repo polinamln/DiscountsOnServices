@@ -1,10 +1,10 @@
 // import css from ""
 
-import ChooseASubscription from "../components/ChooseASubscription/ChooseASubscription.jsx.jsx";
-import Hero from "../components/Hero/Hero.jsx.jsx";
-import HowItWorks from "../components/HowItWorks/HowItWorks.jsx.jsx";
-import AboutUs from "../components/AboutUs/AboutUs.jsx.jsx";
-import Faq from "../components/Faq/Faq.jsx.jsx";
+import ChooseASubscription from "../components/ChooseASubscription/ChooseASubscription.jsx";
+import Hero from "../components/Hero/Hero.jsx";
+import HowItWorks from "../components/HowItWorks/HowItWorks.jsx";
+import AboutUs from "../components/AboutUs/AboutUs.jsx";
+import Faq from "../components/Faq/Faq.jsx";
 import CardAnotherSubs from "../components/BlueCard/CardAnotherSubs.jsx";
 
 export default function Home({ setModalSub, setModalSup }) {
