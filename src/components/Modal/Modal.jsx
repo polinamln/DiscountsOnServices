@@ -57,22 +57,25 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
       </div>
       <div className={css.linksBox}>
         <div className={css.cardsBox}>
-          <Link
-            className={css.linkUser}
-            to="/account"
-            onClick={() => setModal(false)}
-          >
-            <div className={css.iconBack}>
-              <Icon
-                name="icon-user"
-                h="20px"
-                w="20px"
-                className={css.customIcon}
-              />
-            </div>
+          {activeUser && (
+            <Link
+              className={css.linkUser}
+              to="/account"
+              onClick={() => setModal(false)}
+            >
+              <div className={css.iconBack}>
+                <Icon
+                  name="icon-user"
+                  h="20px"
+                  w="20px"
+                  className={css.customIcon}
+                />
+              </div>
 
-            <p className={css.linkText}>Home</p>
-          </Link>
+              <p className={css.linkText}>Home</p>
+            </Link>
+          )}
+
           <ul className={css.listNav}>
             <li>
               <Link className={css.link} to="/" onClick={() => setModal(false)}>
