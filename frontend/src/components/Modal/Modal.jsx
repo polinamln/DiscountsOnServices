@@ -44,7 +44,7 @@ export default function Modal({ setModal, setModalLogin, setModalRegister }) {
     }
     setModal(false);
 
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   };
 
   return (
