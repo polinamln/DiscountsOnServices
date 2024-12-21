@@ -1,6 +1,6 @@
-import css from "./BlueCard.module.css";
+import css from "./CardAnotherSubs.module.css";
 
-export default function BlueCard({ setModalSub }) {
+export default function CardAnotherSubs({ setModalSub }) {
   return (
     <div className="container">
       <div className={css.cardBlue}>

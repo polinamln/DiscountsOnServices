@@ -5,7 +5,7 @@ import Hero from "../components/Hero/Hero";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Faq from "../components/Faq/Faq";
-import BlueCard from "../components/BlueCard/BlueCard";
+import CardAnotherSubs from "../components/BlueCard/CardAnotherSubs.jsx";
 
 export default function Home({ setModalSub, setModalSup }) {
   return (
@@ -16,7 +16,7 @@ export default function Home({ setModalSub, setModalSup }) {
       <AboutUs id="about"></AboutUs>
       <Faq id="faq" setModalSup={setModalSup}></Faq>
 
-      <BlueCard setModalSub={setModalSub}></BlueCard>
+      <CardAnotherSubs setModalSub={setModalSub}></CardAnotherSubs>
     </div>
   );
 }

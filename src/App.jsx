@@ -19,6 +19,7 @@ import PaidModal from "./components/PaidModal/PaidModal";
 import SupModal from "./components/SupModal/SupModal";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Account from "./pages/Account";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -101,6 +102,8 @@ function App() {
           path="/youtube"
           element={<YouTube setModalPay={setModalPay} />}
         />
+
+        <Route path="/account" element={<Account />} />
       </Routes>
 
       <Footer></Footer>
