@@ -13,6 +13,7 @@ export const register = async ({ name, email, password }) => {
     return res.data;
   } catch (e) {
     console.error(e);
+    throw e;
   }
 };
 
@@ -20,9 +21,11 @@ export const login = async ({ email, password }) => {
   try {
     const res = await axios.post("/login", { email, password });
     console.log(res.data);
+
     return res.data;
   } catch (e) {
     console.error(e);
+    throw e;
   }
 };
 
@@ -33,6 +36,7 @@ export const logout = async ({ id }) => {
     return res.data;
   } catch (e) {
     console.error(e);
+    throw e;
   }
 };
 
@@ -43,5 +47,6 @@ export const currentUser = async ({ id }) => {
     return res.data;
   } catch (e) {
     console.error(e);
+    throw e;
   }
 };

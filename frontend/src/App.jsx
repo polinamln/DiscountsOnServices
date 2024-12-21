@@ -77,7 +77,12 @@ function App() {
 
       {/* USER */}
 
-      {modalLogin && <Login setModalLogin={setModalLogin}></Login>}
+      {modalLogin && (
+        <Login
+          setModalLogin={setModalLogin}
+          setModalRegister={setModalRegister}
+        ></Login>
+      )}
       {modalRegister && (
         <Register
           setModalRegister={setModalRegister}

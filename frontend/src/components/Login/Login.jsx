@@ -2,10 +2,10 @@ import { RxCross2 } from "react-icons/rx";
 import css from "./Login.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { login } from "../../api";
-// import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export default function Login({ setModalLogin }) {
-  // const navigate = useNavigate();
+export default function Login({ setModalLogin, setModalRegister }) {
+  const [error, setError] = useState("");
 
   return (
     <div className={css.modal}>
@@ -20,7 +20,15 @@ export default function Login({ setModalLogin }) {
         <h2 className={css.title}>Log in</h2>
         <div className={css.textBoxLink}>
           <p className={css.newUser}>New user? </p>
-          <p className={css.create}>Create an account</p>
+          <p
+            onClick={() => {
+              setModalRegister(true);
+              setModalLogin(false);
+            }}
+            className={css.create}
+          >
+            Create an account
+          </p>
         </div>
       </div>
 
@@ -54,7 +62,12 @@ export default function Login({ setModalLogin }) {
 
             resetForm();
           } catch (e) {
-            console.error(e);
+            if (e.response && e.response.status === 401) {
+              setError(e.response.data.message);
+            } else {
+              setError("Something went wrong!");
+            }
+            console.error("Login failed:", e);
           } finally {
             setSubmitting(false);
           }
@@ -97,6 +110,8 @@ export default function Login({ setModalLogin }) {
                 className={css.error}
               />
             </div>
+
+            {error && <p className={css.errorL}>{error}</p>}
 
             <button
               disabled={isSubmitting}

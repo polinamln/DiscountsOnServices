@@ -136,6 +136,13 @@
   color: var(--red);
 }
 
+.errorL {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
 .forgot {
   font-family: var(--font-family);
   font-weight: bold;

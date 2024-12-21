@@ -29,6 +29,13 @@
   box-sizing: border-box;
 }
 
+.errorL {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
 .title {
   font-family: var(--font-family);
   font-weight: 700;
